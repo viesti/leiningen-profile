@@ -6,7 +6,18 @@
                   [jonase/eastwood "0.1.2"]
                   [cider/cider-nrepl "0.8.0-SNAPSHOT"]
                   [lein-exec "0.3.4"]]
-        :repl-options {:init (set! *print-length* 42)}
+        :repl-options {:init (set! *print-length* 42)
+                       :nrepl-middleware
+                       [cider.nrepl.middleware.classpath/wrap-classpath
+                        cider.nrepl.middleware.complete/wrap-complete
+                        cider.nrepl.middleware.info/wrap-info
+                        cider.nrepl.middleware.inspect/wrap-inspect
+                        cider.nrepl.middleware.macroexpand/wrap-macroexpand
+                        cider.nrepl.middleware.resource/wrap-resource
+                        cider.nrepl.middleware.stacktrace/wrap-stacktrace
+                        cider.nrepl.middleware.test/wrap-test
+                        cider.nrepl.middleware.trace/wrap-trace
+                        cider.nrepl.middleware.undef/wrap-undef]}
         ;:cljsbuild {:builds {:dev {:notify-command ["growlnotify" "-m"]}}}
         :injections [(require 'vinyasa.inject 'com.georgejahad.difform 'spyscope.core)
                      (vinyasa.inject/inject 'clojure.core '>
