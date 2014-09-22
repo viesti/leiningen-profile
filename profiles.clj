@@ -3,7 +3,7 @@
                        [org.clojure/tools.namespace "0.2.4"]
                        [spyscope "0.1.4"]]
         :plugins [[lein-localrepo "0.5.3"]
-                  [jonase/eastwood "0.1.2"]
+                  [jonase/eastwood "0.1.4"]
                   [cider/cider-nrepl "0.8.0-SNAPSHOT"]
                   [lein-exec "0.3.4"]]
         :repl-options {:init (set! *print-length* 42)
