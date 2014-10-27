@@ -1,4 +1,4 @@
-{:user {:dependencies [[spyscope "0.1.4"]
+{:user {:dependencies [[spyscope "0.1.5"]
                        [org.clojure/tools.namespace "0.2.4"]
                        [im.chit/vinyasa "0.2.2"]
                        [im.chit/iroh "0.1.11"]
