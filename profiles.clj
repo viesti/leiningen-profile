@@ -1,4 +1,5 @@
-{:shared {:plugins [[cider/cider-nrepl "0.8.2"]]
+{:shared {:plugins [[cider/cider-nrepl "0.8.2"]
+                    [lein-pprint "1.1.1"]]
           :repl-options {:init (set! *print-length* 42)}}
  :vinyasa {:dependencies [[im.chit/vinyasa "0.2.2"]
                           [im.chit/iroh "0.1.11"]]
