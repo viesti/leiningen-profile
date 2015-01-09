@@ -1,5 +1,7 @@
 {:shared {:plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]
-                    [lein-pprint "1.1.1"]]
+                    [lein-pprint "1.1.1"]
+                    [jonase/eastwood "0.2.1"]
+                    [refactor-nrepl "0.2.2"]]
           :repl-options {:init (set! *print-length* 42)}}
  :vinyasa {:dependencies [[im.chit/vinyasa "0.2.2"]
                           [im.chit/iroh "0.1.11"]
