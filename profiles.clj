@@ -1,14 +1,17 @@
-{:shared {:plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]
+{:shared {:plugins [[cider/cider-nrepl "0.9.1"]
                     [lein-pprint "1.1.1"]
                     [jonase/eastwood "0.2.1"]
-                    [refactor-nrepl "1.0.3"]
-                    [lein-ancient "0.6.7"]]
-          :repl-options {:init (set! *print-length* 42)}}
+                    [lein-ancient "0.6.7"]
+                    [org.clojure/tools.nrepl "0.2.10"]]
+          :repl-options {:init (set! *print-length* 42)}
+          :figwheel {:open-file-command "figwheel-file-opener"}}
  :vinyasa {:dependencies [[im.chit/vinyasa "0.2.2"]
                           [im.chit/iroh "0.1.11"]
                           [org.clojure/tools.namespace "0.2.10"]
-                          [aprint "0.1.3"]]
-           :injections [(require '[vinyasa.inject :as inject])
+                          [aprint "0.1.3"]
+                          [spyscope "0.1.5"]]
+           :injections [(require '[vinyasa.inject :as inject]
+                                 'spyscope.core)
                         (inject/in [vinyasa.inject :refer [inject [in inject-in]]]
                                    [vinyasa.pull :all]
                                    [cemerick.pomegranate add-classpath get-classpath resources]
@@ -20,4 +23,8 @@
                                    [aprint.core aprint nprint]
                                    [clojure.java.shell sh]
                                    [clojure.repl doc source pst])]}
- :user [:shared :vinyasa]}
+ :droid {:plugins [[lein-droid "0.4.0-alpha4"]]}
+ :moar-opts {:jvm-opts ["-XX:+UnlockDiagnosticVMOptions" "-XX:+DebugNonSafepoints" "-XX:+UnlockCommercialFeatures" "-XX:+FlightRecorder"]}
+ :yagni {:plugins [[venantius/yagni "0.1.2"]]}
+ :refactor {:plugins [[refactor-nrepl "1.1.0"]]}
+ :user [:shared :vinyasa :moar-opts :refactor]}
