@@ -1,4 +1,4 @@
-{:shared {:plugins [[cider/cider-nrepl "0.9.1"]
+{:shared {:plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]
                     [lein-pprint "1.1.1"]
                     [jonase/eastwood "0.2.1"]
                     [lein-ancient "0.6.7"]
@@ -28,5 +28,5 @@
  :droid {:plugins [[lein-droid "0.4.0-alpha4"]]}
  :moar-opts {:jvm-opts ["-XX:+UnlockDiagnosticVMOptions" "-XX:+DebugNonSafepoints" "-XX:+UnlockCommercialFeatures" "-XX:+FlightRecorder"]}
  :yagni {:plugins [[venantius/yagni "0.1.2"]]}
- :refactor {:plugins [[refactor-nrepl "1.1.0"]]}
+ :refactor {:plugins [[refactor-nrepl "1.2.0-SNAPSHOT"]]}
  :user [:shared :vinyasa :moar-opts :refactor]}
