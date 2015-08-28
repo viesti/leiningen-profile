@@ -2,9 +2,11 @@
                     [lein-pprint "1.1.1"]
                     [jonase/eastwood "0.2.1"]
                     [lein-ancient "0.6.7"]
-                    [org.clojure/tools.nrepl "0.2.10"]]
+                    [org.clojure/tools.nrepl "0.2.10"]
+                    [com.jakemccrary/lein-test-refresh "0.10.0"]]
           :repl-options {:init (set! *print-length* 42)}
-          :figwheel {:open-file-command "figwheel-file-opener"}}
+          :figwheel {:open-file-command "figwheel-file-opener"}
+          :test-refresh {:growl true}}
  :vinyasa {:dependencies [[im.chit/vinyasa "0.2.2"]
                           [im.chit/iroh "0.1.11"]
                           [org.clojure/tools.namespace "0.2.10"]
