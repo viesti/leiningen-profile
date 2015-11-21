@@ -4,7 +4,7 @@
                     [lein-ancient "0.6.7"]
                     [org.clojure/tools.nrepl "0.2.10"]
                     [com.jakemccrary/lein-test-refresh "0.10.0"]]
-          :repl-options {:init (set! *print-length* 42)}
+          :global-vars {*print-length* 100}
           :figwheel {:open-file-command "figwheel-file-opener"}
           :test-refresh {:growl true}}
  :vinyasa {:dependencies [[im.chit/vinyasa "0.2.2"]
