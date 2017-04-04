@@ -27,6 +27,6 @@
                         "-XX:+FlightRecorder"]}
  :yagni {:plugins [[venantius/yagni "0.1.2"]]}
  :cider {:plugins [[cider/cider-nrepl "0.14.0"]
-                   [refactor-nrepl "2.2.0"]]}
+                   #_[refactor-nrepl "2.2.0"]]}
  :user [:shared :moar-opts :lucidity]}
 
