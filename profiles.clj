@@ -1,7 +1,7 @@
 {:shared {:plugins [[jonase/eastwood "0.2.3"]
                     [lein-ancient "0.6.10" :exclusions [org.apache.httpcomponents/httpclient
                                                         commons-codec]]
-                    [org.clojure/tools.nrepl "0.2.12"]
+                    [org.clojure/tools.nrepl "0.2.12" :exclusions [org.clojure/clojure]]
                     [com.jakemccrary/lein-test-refresh "0.16.0"]
                     [lein-pprint "1.1.2"]]
           :global-vars {*print-length* 100}
