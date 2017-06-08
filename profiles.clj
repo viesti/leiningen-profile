@@ -10,7 +10,7 @@
  :lucidity {:dependencies [[im.chit/lucid.core.inject "1.2.8"]
                            [im.chit/lucid.mind "1.2.8"]
                            [org.clojure/tools.namespace "0.2.11"]
-                           [pjstadig/humane-test-output "0.8.0"]]
+                           [pjstadig/humane-test-output "0.8.1"]]
             :injections [(require '[lucid.core.inject :as inject])
                          (inject/in
                           [clojure.tools.namespace.repl refresh]
